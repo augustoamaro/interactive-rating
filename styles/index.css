@@ -17,7 +17,6 @@ main {
 
 .card {
     width: 327px;
-    /* height: 360px; */
     background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
     border-radius: 15px;
     margin-top: 154px;
@@ -52,15 +51,36 @@ p {
     font-size: 14px;
     line-height: 22px;
     color: #969FAD;
-    padding-bottom: 24px;
 }
 
 .circles-container {
     display: grid;
+    height: 40px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 18px;
-    /* flex-direction: row;
-    justify-content: center; */
+    margin: 24px 0 24px 0;
+}
+
+.circles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #262E38;
+    border-radius: 50%;
+    /* margin: 24px 0 16px 0; */
+}
+
+.circles-container span {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #7C8798;
 }
 
 .btn-submit {
@@ -74,7 +94,7 @@ p {
     margin-bottom: 32px;
 }
 
-.btn-submit span {
+.btn-submit span{
     font-family: 'Overpass';
     font-style: normal;
     font-weight: 700;
@@ -82,4 +102,33 @@ p {
     line-height: 18px;
     letter-spacing: 1.86667px;
     color: #FFFFFF;
+}
+
+@media (min-width: 1440px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 195px;
+        width: 412px;
+    }
+
+    .circle {
+        width: 48px;
+        height: 48px;
+    }
+
+    .circles-container {
+        gap: 22px;
+        margin: 39px 0 32px 0;
+    }
+
+    .circles {
+    width: 51px;
+    height: 51px;
+    }
+
+    .btn-submit {
+        width: 341px;
+    }
 }
