@@ -17,6 +17,7 @@ main {
 
 .card {
     width: 327px;
+    height: 360px;
     background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
     border-radius: 15px;
     margin-top: 154px;
@@ -65,14 +66,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px; 
     background-color: #262E38;
     border-radius: 50%;
     /* margin: 24px 0 16px 0; */
-}
-
-.circles-container span {
     font-family: 'Overpass';
     font-style: normal;
     font-weight: 700;
@@ -81,6 +79,7 @@ p {
     text-align: center;
     letter-spacing: 0.2px;
     color: #7C8798;
+    cursor: pointer;
 }
 
 .btn-submit {
@@ -92,9 +91,14 @@ p {
     background: #FC7614;
     border-radius: 22.5px;
     margin-bottom: 32px;
+    cursor: pointer;
 }
 
-.btn-submit span{
+.btn-submit:active {
+    background-color: #FFFFFF;
+}
+
+.btn-submit label{
     font-family: 'Overpass';
     font-style: normal;
     font-weight: 700;
@@ -102,6 +106,69 @@ p {
     line-height: 18px;
     letter-spacing: 1.86667px;
     color: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn-submit:active label{
+    color: #FC7614;
+}
+
+.card-content-final {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content-final img {
+    padding: 34px 0 29px 0;
+}
+
+.selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 168px;
+    height: 32px;
+    background: #262E38;
+    border-radius: 22.5px;
+}
+
+.selected span {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FC7614;
+}
+
+.thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.thanks h2 {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    /* margin-top: 24px; */
+}
+
+.thanks p {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #969FAD;
 }
 
 @media (min-width: 1440px) {
@@ -111,6 +178,11 @@ p {
         align-items: center;
         margin-top: 195px;
         width: 412px;
+        height: 416px;
+    }
+
+    .card-content p {
+        width: 340px;
     }
 
     .circle {
@@ -124,11 +196,21 @@ p {
     }
 
     .circles {
-    width: 51px;
-    height: 51px;
+        width: 51px;
+        height: 51px;
+    }
+
+    .circles:active {
+        background-color:  #7C8798;
+        color: #FFFFFF;
     }
 
     .btn-submit {
-        width: 341px;
+        width: 100%;
+    }
+
+    .thanks p {
+        width: 340px;
+        margin: 0 40px 0 32px;
     }
 }
