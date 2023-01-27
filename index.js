@@ -14,10 +14,10 @@ for (let span of spans) {
     span.addEventListener('click', function () {
         span.style.background = '#FC7614'
         span.style.color = '#FFFFFF'
-        for (let otherSpan of spans) {
-            otherSpan.classList.remove('selected');
-        }
-        this.classList.add('selected');
+        // for (let otherSpan of spans) {
+        //     otherSpan.classList.remove('selected');
+        // }
+        // this.classList.add('selected');
 
     });
 }
