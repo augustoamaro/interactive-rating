@@ -12,12 +12,10 @@ for (let span of spans) {
 
 const handleSubmit = () => {
     const selection = document.querySelector('[selection]');
-    console.log(selection)
-
     const cardContent = document.querySelector('[card_content]')
-    cardContent.style.display = 'none';
-
     const cardContentFinal = document.querySelector('[card_final]');
+
+    cardContent.style.display = 'none';
     cardContentFinal.style.display = 'flex';
-    selection.innerHTML = `You selected ${clickedSpans.length} of 5`
+    selection.innerHTML = `You selected ${clickedSpans.length} out of 5`
 }
